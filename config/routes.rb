@@ -1,4 +1,7 @@
 MindManager::Application.routes.draw do
+
+  match 'thoughts' => 'thoughts#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
