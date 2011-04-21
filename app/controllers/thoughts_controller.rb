@@ -2,7 +2,7 @@ class ThoughtsController < ApplicationController
   before_filter :generate_thoughts, :only => [:index]
 
   def index
-    render :text => params.inspect
+  # render :text => params.inspect
   end
 
   def generate_thoughts
