@@ -5,6 +5,10 @@ class ThoughtsController < ApplicationController
   # render :text => params.inspect
   end
 
+  def redirect
+    redirect_to :action => :index if params[:doit] == 'yes'
+  end
+
   def generate_thoughts
     @thoughts = ['Take out trash', 'Am I in love?', 'Who farted?']
   end
