@@ -5,4 +5,8 @@ describe 'ThoughtsController Routing' do
   it 'has a thoughts_path' do
     { :get => thoughts_path }.should route_to :controller => 'thoughts', :action => 'index'
   end
+
+  it 'has a redirect_path' do
+    { :get => redirect_path }.should route_to :controller => 'thoughts', :action => 'redirect'
+  end
 end
