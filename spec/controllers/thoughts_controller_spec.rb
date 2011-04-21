@@ -14,4 +14,24 @@ describe ThoughtsController do
       assigns(:thoughts).should_not be_nil
     end
   end
+
+  describe '#redirect' do
+    before do
+      get :redirect
+    end
+
+    it 'should not redirect_to index' do
+      response.should_not redirect_to(:action => 'index')
+    end
+
+    context 'when doit=yes' do
+      before do
+        get :redirect, :doit => 'yes'
+      end
+
+      it 'should redirect_to index' do
+        response.should redirect_to(:action => 'index')
+      end
+    end
+  end
 end
