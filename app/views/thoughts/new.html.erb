@@ -1,0 +1,6 @@
+<h1>Thoughts#new</h1>
+
+<%= form_tag thoughts_path, :id => 'thought', :method => :post do %>
+  <label>Name your thought <%= text_field_tag(:name) %> </label>
+  <%= submit_tag('Put it in your mind') %>
+<% end %>
