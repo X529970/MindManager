@@ -15,6 +15,26 @@ describe ThoughtsController do
     end
   end
 
+  describe '#new' do
+    before do
+      get :new
+    end
+
+    it 'responds with a success(200)' do
+      response.should be_success
+    end
+  end
+
+  describe '#create' do
+    before do
+      post :create
+    end
+
+    it 'responds with a success(200)' do
+      response.should be_success
+    end
+  end
+
   describe '#redirect' do
     before do
       get :redirect
