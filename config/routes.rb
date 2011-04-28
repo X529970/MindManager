@@ -1,7 +1,9 @@
 MindManager::Application.routes.draw do
 
-  match 'thoughts' => 'thoughts#index'
-  match 'redirect' => 'thoughts#redirect'
+  get   'thoughts'     => 'thoughts#index'
+  post  'thoughts'     => 'thoughts#create', :as => :create_thought
+  match 'redirect'     => 'thoughts#redirect'
+  match 'thoughts/new', :as => :new_thought
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
