@@ -5,6 +5,12 @@ class ThoughtsController < ApplicationController
   # render :text => params.inspect
   end
 
+  def new
+  end
+
+  def create
+  end
+
   def redirect
     redirect_to :action => :index if params[:doit] == 'yes'
   end
