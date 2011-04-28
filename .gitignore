@@ -1,0 +1,9 @@
+.bundle
+.DS_Store
+config/database.yml
+log/
+www/
+tmp/
+db/schema.rb
+BACKUP/
+autotest.txt
